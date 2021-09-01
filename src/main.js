@@ -10,7 +10,7 @@ function tarjeta1(films) {
 //1. recorre el array de Films 
   document.getElementById("container").innerHTML= "";
   const contenedorTarjeta = document.createElement("div");
-  
+  contenedorTarjeta.classList.add("contenedorTarjeta")
 
   for (var i = 0; i < films.length; i++) {
     let title = films[i].title;

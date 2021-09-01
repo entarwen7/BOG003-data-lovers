@@ -218,7 +218,6 @@ footer p{
     left: 80px;
     align-items: flex-start;
 }
-
 /*Prueba segunda vista HU2*/
 .container{
     display: flex;
@@ -236,15 +235,20 @@ footer p{
 .container > h1{
     text-align: center;
 }
-.container div{
-    
-    flex-flow: wrap;
+.contenedorTarjeta{
+    display: flex;
+    flex-wrap: wrap;
     justify-content:space-between;
-    
+   
+}
+
+.contenedorTarjeta:first-child{
+    margin-top: 60px;
+
+    margin-right: 20px;
 }
 .container img{
-
-    width: 250px;
+     width: 250px;
     height: 250px;
     border-radius: 15px;
     box-shadow: 0 8px 8px 8px rgba(2, 34, 66, 0.603);
@@ -254,7 +258,6 @@ footer p{
     margin-top: 10px;
     
 }
-
 .container h3{
     font-family: 'Indie Flower', cursive;
     font-size: 26px;
@@ -292,8 +295,7 @@ footer p{
     display: flex;
     flex-wrap:wrap;
     justify-content:space-between;
-    /*align-items: flex-start;*/
-    margin-left: 15px;
+     margin-left: 15px;
     margin-right: 15px;
     border-radius: 20px;
     background: #f2f2f2;
@@ -312,7 +314,6 @@ footer p{
     font-family:Georgia, 'Times New Roman', Times, serif;
     font-size: 30px;
     text-align: center;
-    margin-left: 600px;
     height:45px;
     width: 65px;
     background-color:cyan;
@@ -320,16 +321,13 @@ footer p{
 }
 .topPeliculas img{
    display: flex;
+   float: right;
    justify-items: right;
-   /*float: right;*/
     width: 280px;
     height: 180px;
         
 }
-.topPeliculas > div{
-    justify-content: space-between;
-    align-items: center;
-    }
+
 .ranking{
     display: flex;
     justify-content:space-between;
@@ -338,15 +336,12 @@ footer p{
     background-color:#059ec0ce;
     width: 100%;    
     max-width: 1440px;
-    margin-top: 20px;
+    margin-top: 100px;
     border-radius: 15px;   
     
 
     }
-.ranking > div{
-width: 20%;
-text-align: center;
-}    
+ 
 /*.tbn{
     background-color: chocolate;
 }*/
@@ -392,6 +387,7 @@ text-align: center;
     background-image: linear-gradient(to right, #738fa88c 0%, #00f1fea4 100%);
     align-items: center;
     justify-content: center;
+    
 
 }
 
@@ -402,7 +398,7 @@ text-align: center;
         background-position: center;
     }
         .menu-despegable {
-        flex-direction: column;
+        flex-direction: row;
         text-align:center;
         justify-content: center;
         width:100%;                     
@@ -426,7 +422,7 @@ text-align: center;
         pointer-events: all;
     }
 .central-container {
-    flex-direction: column;
+    flex-direction: row;
     text-align:center;
     justify-content: center;
         width: 100% ;
@@ -468,18 +464,23 @@ footer{
 
 /*segunda vista*/
 .container{
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
 
     }
     /*Tercera vista*/
  .topPeliculas{
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
  }   
+ .topPeliculas #textMovies #promedio_rt_score{
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 
+}
     }
     
 /*Prueba de responsive para dispositivos movil*/
@@ -564,9 +565,102 @@ footer{
     justify-content: center;
     align-items: center;
  }   
+.topPeliculas #textMovies #promedio_rt_score{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
+}
   
      }
     
 
+@media screen and (max-width:300px) {
 
+        header{
+        background-position: center;
+    }
+    
+    .menu-despegable {
+        flex-direction: column;
+        text-align:center;
+        justify-content: center;
+        width:100%;                     
+    }
+     .menu-despegable:hover{
+    background-color:rgb(200, 240, 240);
+}
+
+    .close-menu {
+        display:block;
+        border: none;
+        background: none;
+        cursor: pointer;
+    }
+    .close-menu{
+        align-self: flex-end;
+        padding: 20px 15px ;
+    }
+    .menu_opened{
+        opacity: 1;
+        pointer-events: all;
+    }
+    .central-container {
+    flex-direction: column;
+    text-align:center;
+    justify-content: center;
+    width: 100%;
+    
+                 
+    }
+    .central-container img{
+    flex-direction: column;
+    text-align:center;
+    justify-content: center;
+    width: 50%;
+    align-items: center;  
+
+    }
+    .central-container p{
+    flex-direction: column;
+    text-align:center;
+    justify-content: center;
+    font-family: 'Indie Flower', cursive; 
+    width: 70%;      
+        
+    }
+    .movies{
+    margin-bottom: 20%;
+    width: 100% ;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    }
+    footer{
+    width: 100% ;   
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/*segunda vista*/
+.container{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    }
+    /*Tercera vista*/
+ .topPeliculas{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+ }   
+.topPeliculas #textMovies #promedio_rt_score{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+  
+     }
