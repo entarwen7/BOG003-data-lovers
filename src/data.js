@@ -28,9 +28,7 @@ export const reduceData = (films) => {
 
 // Promedia el puntaje de las peliculas de Ghibli
    export const promedioStudio = (films) => { 
-
     const suma = films.reduce((acum,item) => {
-       
       return acum = acum + parseInt(item.rt_score)/films.length;     
     },0);
     //console.log(suma)
